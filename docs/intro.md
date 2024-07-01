@@ -1,11 +1,8 @@
 ---
 sidebar_position: 1
 ---
-# 📘 Projet Docusaurus pour la Classe BTS SIO
 
 Bienvenue dans le projet **Babouins - Docusaurus** pour la classe **BTS SIO** ! Ce projet a pour but de centraliser toutes nos procédures, commandes et documentations apprises en cours et de les structurer correctement. Grâce à ce dépôt, nous pourrons tous contribuer à la documentation et la valider ensemble en utilisant un système de fork avec GitHub et l'intégration continue (CI/CD).
-
->⚠️ Actuellement en <u>cours de développement</u>, toutes les explications seront fournies sur <a href="https://babouins.fr" target="_blank">babouins.fr</a>. Ce que vous vous apprêtez à lire sera le <u>but final</u> de ce projet. ⚠️
 
 ## 🎉 Présentation
 
@@ -46,8 +43,8 @@ Pour contribuer au projet :
 
 ## ✅ Validation des Contributions
 
-Toutes les contributions doivent être validées par au moins deux personnes de la classe. Les pull requests seront examinées et testées avant d'être fusionnées (merge). Utilisez le système de commentaires pour suggérer des améliorations et assurer la qualité de la documentation sur notre <a href="https://forum.babouins.fr" target="_blank">forum.babouins.fr</a>.
+Toutes les contributions doivent être validées par au moins deux personnes de la classe. Les pull requests seront examinées et testées avant d'être fusionnées (merge). Utilisez le système de commentaires pour suggérer des améliorations et assurer la qualité de la documentation.
 
 ## 📦 Déploiement
 
-Pour chaque modification apportée au projet, créez une nouvelle branch et soumettez une pull request. Une fois la pull request validée et fusionnée dans la branche main, le déploiement du site sera automatique grâce à notre pipeline CI/CD. Pour plus de détails, consultez le tutoriel sur <a href="https://babouins.fr" target="_blank">babouins.fr</a>.
+Pour chaque modification apportée au projet, créez une nouvelle branch et soumettez une pull request. Une fois la pull request validée et fusionnée dans la branche main, le déploiement du site sera automatique grâce à notre pipeline CI/CD.

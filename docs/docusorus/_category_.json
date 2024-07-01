@@ -1,0 +1,8 @@
+{
+  "label": "Docusorus",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Documents de base de Docusorus."
+  }
+}
