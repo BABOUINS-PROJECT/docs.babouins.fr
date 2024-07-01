@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   build:
@@ -22,7 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      
       - name: Build website
+        env:
+          APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
         run: yarn build
 
       - name: Upload Build Artifact

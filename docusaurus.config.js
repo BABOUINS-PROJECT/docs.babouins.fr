@@ -7,9 +7,6 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 require('dotenv').config()
 
-const API_KEY = process.env.API_KEY
-const APP_ID = process.env.APPLICATION_ID
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Babouins - Documentation',
@@ -71,8 +68,8 @@ const config = {
     ({
 
       algolia: {
-        appId: APP_ID,
-        apiKey: API_KEY,
+        appId: process.env.APP_ID,
+        apiKey: process.env.API_KEY,
         indexName: 'docs.babouins.fr',
         contextualSearch: true,
         searchParameters: {},
