@@ -1,0 +1,8 @@
+{
+  "label": "SLAM",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation des cours de SLAM."
+  }
+}
