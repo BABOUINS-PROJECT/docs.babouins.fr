@@ -10,7 +10,7 @@ require('dotenv').config()
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Babouins - Documentation',
-  tagline: '⚠️ DocSearch en cours de dev ⚠️',
+  tagline: '⚠️ DocSearch est en cours de développement ⚠️',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -103,7 +103,7 @@ const config = {
         style: 'dark',
         links: [
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Babouins Project. Créer avec Docusaurus`,
+        copyright: `Copyright © ${new Date().getFullYear()} Babouins Project.`,
       },
       prism: {
         theme: prismThemes.github,

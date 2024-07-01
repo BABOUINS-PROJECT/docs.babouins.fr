@@ -15,7 +15,7 @@ Pour contribuer au projet :
 
 1. **Forkez** le dépôt. 
 
-> Un **fork** est une copie du projet d'un dépôt GitHub sur votre compte GitHub personnel. Cela vous permet de travailler sur le projet <u>sans affecter l'original</u>. Une fois vos modifications terminées, vous pouvez demander à intégrer vos changements dans le projet principal (main) via une pull request.
+> Un **fork** est une copie d'un projet GitHub sur votre propre compte. Cela vous permet de travailler sur le projet sans toucher à l'original. Une fois vos modifications terminées, vous pouvez demander à les ajouter au projet principal via une pull request.
 
 2. **Clonez** votre fork sur votre machine :
     ```bash
