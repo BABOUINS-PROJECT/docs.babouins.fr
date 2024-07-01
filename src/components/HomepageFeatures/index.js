@@ -4,22 +4,20 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Facile à utiliser',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Docusaurus a été conçu dès le départ pour être facilement installé et utilisé afin de rendre votre site Web rapidement opérationnel.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Se concentrer sur l\'essentiel',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+      Docusaurus vous permet de vous concentrer sur vos documents, et nous nous chargeons des tâches. Allez-y et déplacez vos documents dans le répertoire <code>docs</code>.
       </>
     ),
   },
@@ -28,8 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Étendez ou personnalisez la mise en page de votre site web en réutilisant React. Docusaurus peut être étendu tout en réutilisant le même en-tête et le même pied de page.
       </>
     ),
   },

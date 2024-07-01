@@ -1,47 +1,53 @@
 ---
 sidebar_position: 1
 ---
+# 📘 Projet Docusaurus pour la Classe BTS SIO
 
-# Tutorial Intro
+Bienvenue dans le projet **Babouins - Docusaurus** pour la classe **BTS SIO** ! Ce projet a pour but de centraliser toutes nos procédures, commandes et documentations apprises en cours et de les structurer correctement. Grâce à ce dépôt, nous pourrons tous contribuer à la documentation et la valider ensemble en utilisant un système de fork avec GitHub et l'intégration continue (CI/CD).
 
-Let's discover **Docusaurus in less than 5 minutes**.
+>⚠️ Actuellement en <u>cours de développement</u>, toutes les explications seront fournies sur <a href="https://babouins.fr" target="_blank">babouins.fr</a>. Ce que vous vous apprêtez à lire sera le <u>but final</u> de ce projet. ⚠️
 
-## Getting Started
+## 🎉 Présentation
 
-Get started by **creating a new site**.
+Ce projet a été créé par **Dimitri Chassignol** pour faciliter la gestion et la validation de notre documentation technique. Chaque membre de la classe peut participer en proposant des modifications, des ajouts et des améliorations, qui seront ensuite validés par les autres membres de la classe sur ce repo. 
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## 🚀 Fonctionnalités
 
-### What you'll need
+- **Centralisation** de toutes les procédures, commandes et documentations.
+- **Collaboration** via des forks et des pull requests sur GitHub.
+- **Validation** de la documentation par toute la classe.
+- **Déploiement automatique** grâce à un pipeline CI/CD.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## 📝 Contribution
 
-## Generate a new site
+Pour contribuer au projet :
 
-Generate a new Docusaurus site using the **classic template**.
+1. **Forkez** le dépôt. 
 
-The classic template will automatically be added to your project after you run the command:
+> Un **fork** est une copie du projet d'un dépôt GitHub sur votre compte GitHub personnel. Cela vous permet de travailler sur le projet <u>sans affecter l'original</u>. Une fois vos modifications terminées, vous pouvez demander à intégrer vos changements dans le projet principal (main) via une pull request.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+2. **Clonez** votre fork sur votre machine :
+    ```bash
+    git clone https://github.com/BABOUINS-PROJECT/docs.babouins.fr.git
+    ```
+3. **Créez** une nouvelle branche pour vos modifications :
+    ```bash
+    git checkout -b <branch>
+    ```
+4. **Effectuez** vos modifications et **committez** :
+    ```bash
+    git commit -m "ajout_nouvelle_procédure"
+    ```
+5. **Pushez** vers votre fork :
+    ```bash
+    git push 
+    ```
+6. **Ouvrez** une pull request sur le dépôt principal afin qu'elle soit validée par l'équipe d'administration de la classe.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## ✅ Validation des Contributions
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Toutes les contributions doivent être validées par au moins deux personnes de la classe. Les pull requests seront examinées et testées avant d'être fusionnées (merge). Utilisez le système de commentaires pour suggérer des améliorations et assurer la qualité de la documentation sur notre <a href="https://forum.babouins.fr" target="_blank">forum.babouins.fr</a>.
 
-## Start your site
+## 📦 Déploiement
 
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Pour chaque modification apportée au projet, créez une nouvelle branch et soumettez une pull request. Une fois la pull request validée et fusionnée dans la branche main, le déploiement du site sera automatique grâce à notre pipeline CI/CD. Pour plus de détails, consultez le tutoriel sur <a href="https://babouins.fr" target="_blank">babouins.fr</a>.

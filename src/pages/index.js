@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Pull Request sur Github - 5min ⏱️
+            Créer un tutoriel sur la documentation
           </Link>
         </div>
       </div>
@@ -32,7 +32,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Oh un Babouins 🙊 ! `}
+      title={`Accueil`}
       description="Bienvenue dans le projet Babouins - Docusaurus pour la classe BTS SIO ! Ce projet a pour but de centraliser toutes nos procédures, commandes et documentations apprises en cours et de les structurer correctement. Grâce à ce dépôt, nous pourrons tous contribuer à la documentation et la valider ensemble en utilisant un système de fork avec GitHub et l'intégration continue (CI/CD).">
       <HomepageHeader />
       <main>
