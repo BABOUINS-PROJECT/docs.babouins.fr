@@ -1,10 +1,10 @@
-# TP: M.SAGNARD : MySQL, Minecraft et Reverse Proxy NGINX
+# TP: M.SAGNARD : MySQL, Minecraft, Reverse Proxy NGINX et HAProxy
 
 ## Objectifs
 
 - Installer et configurer un serveur MySQL en Master-Slave.
 - Configurer un serveur Minecraft avec BlueMap.
-- Configurer un Reverse Proxy NGINX pour accéder à la carte du serveur Minecraft.
+- Configurer un Reverse Proxy NGINX et HAProxy pour accéder à la carte du serveur Minecraft.
 - Vérifier le bon fonctionnement de la carte sur le navigateur.
 - Vérifier la création des tables dans la base de données MySQL.
 - Vérifier la synchronisation des données entre le Master et le Slave.
@@ -14,12 +14,11 @@
 - **Master-Slave** : Architecture de base de données où un serveur (Master) est responsable de l'écriture des données et de leur réplication vers un ou plusieurs serveurs (Slave) pour la lecture.
 - **BlueMap** : Plugin Minecraft permettant de générer des cartes interactives du serveur.
 - **Reverse Proxy** : Serveur intermédiaire qui reçoit les requêtes des clients et les transmet aux serveurs appropriés.
-- **Différence entre Proxy et Reverse Proxy** : Un Proxy est un serveur qui agit en tant qu'intermédiaire entre les clients et les serveurs, tandis qu'un Reverse Proxy agit en tant qu'intermédiaire entre les serveurs et les clients.
-*Exemple un serveur dans un restaurant qui prend les commandes des clients et les transmet à la cuisine est un Proxy, tandis qu'un serveur qui reçoit les plats de la cuisine et les apporte aux clients est un Reverse Proxy.*
+- **Différence entre Proxy et Reverse Proxy** : Un Proxy est un serveur qui agit en tant qu'intermédiaire entre les clients et les serveurs, tandis qu'un Reverse Proxy agit en tant qu'intermédiaire entre les serveurs et les clients.*
 
 ## Prérequis
 
-Avant de commencer, assurez-vous d'avoir téléchargé les fichiers nécessaires dans le répertoire `/tmp` :
+Avant de commencer, téléchargez les fichiers nécessaires dans le répertoire `/tmp` :
 
 ```bash
 cd /tmp
@@ -27,13 +26,14 @@ cd /tmp
 
 **Sur le serveur Minecraft** :
 ```bash
-wget https://public.babouins.fr/assets/bluemap-mysql-nginx/server.jar
-wget https://public.babouins.fr/assets/bluemap-mysql-nginx/bluemap-spigot.jar
-wget https://public.babouins.fr/assets/bluemap-mysql-nginx/minecraft-client.jar
+wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/server.jar
+wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/bluemap-spigot.jar
+wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/minecraft-client.jar
 ```
 **Sur le serveur Proxy** :
 ```bash
-wget https://public.babouins.fr/assets/bluemap-mysql-nginx/default.conf
+wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/default.conf
+wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/haproxy.cfg
 ```
 
 ## Partie 1: Installation de MySQL
@@ -250,3 +250,29 @@ wget https://public.babouins.fr/assets/bluemap-mysql-nginx/default.conf
     nginx -t
     systemctl restart nginx
     ```
+5. **Vérification sur le navigateur** :
+    - Se rendre sur [https://fqdn] pour vérifier l'apparition de la carte du serveur.
+
+## Partie4 : Configuration d'HAPROXY
+
+1. **Installation de HAProxy** :
+    ```bash
+    apt install haproxy -y
+    ```
+2. **Configuration de HAProxy** :
+    ```bash
+    mv /tmp/haproxy.cfg /etc/haproxy/haproxy.cfg
+    ```
+    - Remplacer `IPV6-MC` par l'adresse IP V6 du serveur Minecraft.
+  
+3. **Configuration des certificats TLS** :
+    ```bash
+    cat /etc/letsencrypt/live/fqdn/fullchain.pem /etc/letsencrypt/live/fqdn/privkey.pem > /etc/haproxy/ssl/ssl.pem
+    ```
+4. **Vérification et redémarrage de HAProxy** :
+    ```bash
+    haproxy -c -f /etc/haproxy/haproxy.cfg
+    systemctl restart haproxy
+    ```
+5. **Vérification sur le navigateur** :
+    - Se rendre sur [https://fqdn] pour vérifier l'apparition de la carte du serveur.
