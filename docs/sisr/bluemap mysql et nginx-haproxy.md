@@ -4,7 +4,7 @@
 
 - Installer et configurer un serveur MySQL en Master-Slave.
 - Configurer un serveur Minecraft avec BlueMap.
-- Configurer un Reverse Proxy NGINX et HAProxy pour accéder à la carte du serveur Minecraft.
+- Configurer un Reverse Proxy via NGINX ou HAProxy pour accéder à la carte du serveur Minecraft en HTTPS.
 - Vérifier le bon fonctionnement de la carte sur le navigateur.
 - Vérifier la création des tables dans la base de données MySQL.
 - Vérifier la synchronisation des données entre le Master et le Slave.
@@ -14,7 +14,7 @@
 - **Master-Slave** : Architecture de base de données où un serveur (Master) est responsable de l'écriture des données et de leur réplication vers un ou plusieurs serveurs (Slave) pour la lecture.
 - **BlueMap** : Plugin Minecraft permettant de générer des cartes interactives du serveur.
 - **Reverse Proxy** : Serveur intermédiaire qui reçoit les requêtes des clients et les transmet aux serveurs appropriés.
-- **Différence entre Proxy et Reverse Proxy** : Un Proxy est un serveur qui agit en tant qu'intermédiaire entre les clients et les serveurs, tandis qu'un Reverse Proxy agit en tant qu'intermédiaire entre les serveurs et les clients.*
+*Exemple : Un serveur dans un restaurant qui reçoit les commandes des clients et les transmet aux cuisines correspondantes.*
 
 ## Prérequis
 
