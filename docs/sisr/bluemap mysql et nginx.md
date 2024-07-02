@@ -1,14 +1,38 @@
 # TP: M.SAGNARD : MySQL, Minecraft et Reverse Proxy NGINX
 
+## Objectifs
+
+- Installer et configurer un serveur MySQL en Master-Slave.
+- Configurer un serveur Minecraft avec BlueMap.
+- Configurer un Reverse Proxy NGINX pour accéder à la carte du serveur Minecraft.
+- Vérifier le bon fonctionnement de la carte sur le navigateur.
+- Vérifier la création des tables dans la base de données MySQL.
+- Vérifier la synchronisation des données entre le Master et le Slave.
+  
+## Définitions
+
+- **Master-Slave** : Architecture de base de données où un serveur (Master) est responsable de l'écriture des données et de leur réplication vers un ou plusieurs serveurs (Slave) pour la lecture.
+- **BlueMap** : Plugin Minecraft permettant de générer des cartes interactives du serveur.
+- **Reverse Proxy** : Serveur intermédiaire qui reçoit les requêtes des clients et les transmet aux serveurs appropriés.
+- **Différence entre Proxy et Reverse Proxy** : Un Proxy est un serveur qui agit en tant qu'intermédiaire entre les clients et les serveurs, tandis qu'un Reverse Proxy agit en tant qu'intermédiaire entre les serveurs et les clients.
+*Exemple un serveur dans un restaurant qui prend les commandes des clients et les transmet à la cuisine est un Proxy, tandis qu'un serveur qui reçoit les plats de la cuisine et les apporte aux clients est un Reverse Proxy.*
+
 ## Prérequis
 
 Avant de commencer, assurez-vous d'avoir téléchargé les fichiers nécessaires dans le répertoire `/tmp` :
 
 ```bash
 cd /tmp
+```
+
+**Sur le serveur Minecraft** :
+```bash
 wget https://public.babouins.fr/assets/bluemap-mysql-nginx/server.jar
 wget https://public.babouins.fr/assets/bluemap-mysql-nginx/bluemap-spigot.jar
 wget https://public.babouins.fr/assets/bluemap-mysql-nginx/minecraft-client.jar
+```
+**Sur le serveur Proxy** :
+```bash
 wget https://public.babouins.fr/assets/bluemap-mysql-nginx/default.conf
 ```
 
@@ -27,7 +51,7 @@ wget https://public.babouins.fr/assets/bluemap-mysql-nginx/default.conf
     ```
     - Modifier `bind-address` en `::`
     - Retirer le `#` devant `server-id = 1`
-    - Retirer `log_bin = /var/log/mysql/mysql-bin.log`
+    - Supprimer `log_bin = /var/log/mysql/mysql-bin.log`
 
 3. **Création du répertoire de logs** :
     ```bash
@@ -73,7 +97,7 @@ wget https://public.babouins.fr/assets/bluemap-mysql-nginx/default.conf
     ```
     - Modifier `bind-address` en `::`
     - Retirer le `#` devant `server-id = 2`
-    - Retirer `log_bin = /var/log/mysql/mysql-bin.log`
+    - Supprimer `log_bin = /var/log/mysql/mysql-bin.log`
 
 3. **Création du répertoire de logs** :
     ```bash
@@ -110,13 +134,21 @@ wget https://public.babouins.fr/assets/bluemap-mysql-nginx/default.conf
 2. **Gestion des processus Minecraft** :
     ```bash
     systemctl stop minecraft-*
+    ```
+    ```bash
     mv /tmp/server.jar /srv/mc/alice/server.jar
     chown -R alice:alice /srv/mc/alice
+    ```
+    ```bash
     systemctl start minecraft-alice
     journalctl -u minecraft-alice -f
     systemctl stop minecraft-alice
+    ```
+    ```bash
     mv /tmp/bluemap-spigot.jar /srv/mc/alice/plugins/
     chown -R alice:alice /srv/mc/alice
+    ```
+    ```bash
     systemctl start minecraft-alice
     journalctl -u minecraft-alice -f
     ```
@@ -173,6 +205,21 @@ wget https://public.babouins.fr/assets/bluemap-mysql-nginx/default.conf
     mysql
     USE bluemap;
     SHOW TABLES;
+    ```
+
+    Le résultat doit être similaire à :
+    ```sql
+    MariaDB [bluemap]> SHOW TABLES;
+    +------------------------------+
+    | Tables_in_bluemap            |
+    +------------------------------+
+    | bluemap_map                  |
+    | bluemap_map_meta             |
+    | bluemap_map_tile             |
+    | bluemap_map_tile_compression |
+    | bluemap_storage_meta         |
+    +------------------------------+
+    5 rows in set (0,000 sec)
     ```
 
 ## Partie 3: Configuration du Reverse Proxy NGINX
