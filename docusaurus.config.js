@@ -11,7 +11,7 @@ require('dotenv').config()
 const config = {
   title: 'Babouins - Documentation',
   tagline: '⚠️ DocSearch est en cours de développement ⚠️',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/baboons.svg',
 
   // Set the production url of your site here
   url: 'https://babouins-project.github.io',
@@ -61,7 +61,7 @@ const config = {
     ({
 
        algolia: {
-         appId: process.env.APP_ID,
+         appId: process.env.APPLICATION_ID,
          apiKey: process.env.API_KEY,
          indexName: 'docs.babouins.fr',
          contextualSearch: true,
@@ -75,7 +75,7 @@ const config = {
         title: 'Babouins',
         logo: {
           alt: 'Babouins - Documentation',
-          src: 'img/logo.svg',
+          src: 'img/baboons.svg',
         },
         
         items: [
