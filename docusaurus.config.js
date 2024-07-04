@@ -65,18 +65,18 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    /** @type {import('@docusaurus/theme-search-algolia').ThemeConfig} */
+     /** @type {import('@docusaurus/theme-search-algolia').ThemeConfig} */
     ({
 
-      algolia: {
-        appId: process.env.APP_ID,
-        apiKey: process.env.API_KEY,
-        indexName: 'docs.babouins.fr',
-        contextualSearch: true,
-        searchParameters: {},
-        searchPagePath: 'search',
-        //... other Algolia params
-      },
+       algolia: {
+         appId: process.env.APP_ID,
+         apiKey: process.env.API_KEY,
+         indexName: 'docs.babouins.fr',
+         contextualSearch: true,
+         searchParameters: {},
+         searchPagePath: 'search',
+         //... other Algolia params
+       },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -90,9 +90,8 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Docs',
+            label: 'Documentations & Procédures',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/BABOUINS-PROJECT/docs.babouins.fr/',
             label: 'GitHub',
