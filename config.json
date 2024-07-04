@@ -1,7 +1,7 @@
 {
     "index_name": "docs.babouins.fr",
     "start_urls": [
-      "https://docs.babouins.fr"
+      "https://docs.babouins.fr/"
     ],
     "sitemap_urls": [
       "https://docs.babouins.fr/sitemap.xml"
