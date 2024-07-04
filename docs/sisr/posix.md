@@ -1,4 +1,4 @@
-# 📜 Documentation des droits POSIX sous Linux
+# Droits POSIX
 
 🔗 **Supports** : [Guide des permissions POSIX](https://fr.wikipedia.org/wiki/Permissions_UNIX)
 
