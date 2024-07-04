@@ -1,4 +1,4 @@
-# 🛠️ TP: M.SAGNARD : MySQL, Minecraft, Reverse Proxy NGINX et HAProxy 🎮
+# MySQL, BlueMap, Reverse Proxy Nginx & HAProxy 
 
 ## 🎯 Objectifs
 
@@ -35,7 +35,7 @@ wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/default.conf
 wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/haproxy.cfg
 ```
 
-## 📂 Partie 1: Installation de MySQL
+## 📂 Partie 1 : Installation de MySQL
 
 ### Serveur MySQL 1
 
@@ -122,7 +122,7 @@ wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/haproxy.cfg
     ```
     - Vérifier le message "Slave has read all relay log; waiting for more updates"
 
-## 🎮 Partie 2: Configuration du Serveur Minecraft
+## 🎮 Partie 2 : Configuration du Serveur Minecraft
 
 1. **🚹 Informations** :
     - Le serveur utilise un template préconfiguré avec Minecraft installé (sio1-gw-posix).
@@ -221,7 +221,7 @@ wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/haproxy.cfg
     5 rows in set (0,000 sec)
     ```
 
-## 🌐 Partie 3: Configuration du Reverse Proxy NGINX
+## 🌐 Partie 3 : Configuration du Reverse Proxy Nginx
 
 1. **🔒 Installation et génération des certificats TLS via Certbot** :
     ```bash
@@ -252,7 +252,7 @@ wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/haproxy.cfg
 5. **🌐 Vérification sur le navigateur** :
     - Se rendre sur [https://fqdn] pour vérifier l'apparition de la carte du serveur.
 
-## 🌐 Partie 4 : Configuration d'HAPROXY
+## 🌐 Partie 4 : Configuration de HAProxy
 
 1. **💻 Installation de HAProxy** :
     ```bash
