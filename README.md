@@ -1,6 +1,6 @@
-## Bienvenue
+# Bienvenue
 
-Bienvenue dans le projet **Babouins - Docusaurus** pour la classe **BTS SIO** ! Ce projet, créé par **Dimitri Chassignol**, a pour but de centraliser toutes nos procédures, commandes et documentations apprises en cours et de les structurer correctement. Grâce à ce dépôt, nous pourrons tous contribuer à la documentation et la valider ensemble en utilisant un système de fork avec GitHub et l'intégration continue (CI/CD). Chaque membre de la classe peut participer en proposant des modifications, des ajouts et des améliorations, qui seront ensuite validés par les autres membres de la classe.
+Bienvenue dans le projet **Babouins - Docusaurus** pour la classe **BTS SIO** ! Ce projet, a pour but de centraliser toutes nos procédures, commandes et documentations apprises en cours et de les structurer correctement. Grâce à ce dépôt, nous pourrons tous contribuer à la documentation et la valider ensemble en utilisant un système de fork avec GitHub et l'intégration continue (CI/CD). Chaque membre de la classe peut participer en proposant des modifications, des ajouts et des améliorations, qui seront ensuite validés par les autres membres de la classe.
 
 ## 🚀 Fonctionnalités
 
@@ -8,6 +8,9 @@ Bienvenue dans le projet **Babouins - Docusaurus** pour la classe **BTS SIO** ! 
 - **Collaboration** via des forks et des pull requests sur GitHub.
 - **Validation** de la documentation par toute la classe.
 - **Déploiement automatique** grâce à un pipeline CI/CD.
+- **Hébergeur de fichiers** pour les assets et les ressources.
+
+*Pour l'hébergement de fichiers veuillez contacter une personne ayant le rôle `Pull Request - Manager` sur le serveur Discord.*
 
 ## 📝 Contribution
 
@@ -42,12 +45,3 @@ Toutes les contributions doivent être validées par au moins deux personnes de 
 ## 📦 Déploiement
 
 Pour chaque modification apportée au projet, créez une nouvelle branch et soumettez une pull request. Une fois la pull request validée et fusionnée dans la branche main, le déploiement du site sera automatique grâce à notre pipeline CI/CD.
-
-## 📄 License
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](./LICENSE.txt) pour plus d'informations.
-
----
-
-<br>
-Créé avec ❤️ par Dimitri Chassignol - 2024
