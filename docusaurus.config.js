@@ -61,7 +61,7 @@ const config = {
     ({
 
        algolia: {
-         appId: process.env.APPLICATION_ID,
+         appId: process.env.APP_ID,
          apiKey: process.env.API_KEY,
          indexName: 'docs.babouins.fr',
          contextualSearch: true,
