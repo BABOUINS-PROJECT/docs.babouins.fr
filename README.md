@@ -10,7 +10,10 @@ Bienvenue dans le projet **Babouins - Docusaurus** pour la classe **BTS SIO** ! 
 - **Déploiement automatique** grâce à un pipeline CI/CD.
 - **Hébergeur de fichiers** pour les assets et les ressources.
 
-*Pour l'hébergement de fichiers veuillez contacter une personne ayant le rôle `Pull Request - Manager` sur le serveur Discord.*
+*Pour l'hébergement de fichiers, veuillez contacter une des personnes suivantes sur le serveur Discord :**@Jordan DIGAT**, **@Dimitri Chassignol** ou **@Mathis Norel**.*
+- [Jordan DIGAT](https://github.com/JordanDIG)
+- [Dimitri Chassignol](https://github.com/DITSHOOT)
+- [Mathis Norel](https://github.com/Aamande)
 
 ## 📝 Contribution
 

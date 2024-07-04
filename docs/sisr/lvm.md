@@ -1,6 +1,5 @@
 # LVM (Logical Volume Manager) - Guide Snapshot
 
- 
 🔗 **Supports** : [LVM sous Linux - Volumes Logiques](https://www.linuxtricks.fr/wiki/lvm-sous-linux-volumes-logiques)
 
 ### 📚 Définitions
@@ -20,7 +19,6 @@
 - **Fstab**: Fichier de configuration qui définit comment les systèmes de fichiers doivent être montés au démarrage.
 - **Inodes**: Structures de données contenant des métadonnées sur les fichiers, incluant les emplacements des blocs de données. 
 **Pour plus d'information :** [Notes supplémentaires](#-notes-supplémentaires-)
-
 
 ### 🔧 Création d'une partition LVM
 
