@@ -7,7 +7,6 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 require('dotenv').config()
 
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Babouins - Documentation',
@@ -49,13 +48,6 @@ const config = {
           editUrl:
             'https://github.com/BABOUINS-PROJECT/docs.babouins.fr/tree/main',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/BABOUINS-PROJECT/docs.babouins.fr/tree/main',
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -85,6 +77,7 @@ const config = {
           alt: 'Babouins - Documentation',
           src: 'img/logo.svg',
         },
+        
         items: [
           {
             type: 'docSidebar',
@@ -98,7 +91,8 @@ const config = {
             position: 'right',
           },
         ],
-      },
+      }
+      
       footer: {
         style: 'dark',
         links: [
