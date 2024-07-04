@@ -91,8 +91,7 @@ const config = {
             position: 'right',
           },
         ],
-      }
-      
+      },  
       footer: {
         style: 'dark',
         links: [
