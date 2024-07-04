@@ -1378,6 +1378,7 @@
     react-helmet-async "*"
     react-loadable "npm:@docusaurus/react-loadable@6.0.0"
 
+
 "@docusaurus/plugin-content-blog@3.4.0":
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-content-blog/-/plugin-content-blog-3.4.0.tgz#6373632fdbababbda73a13c4a08f907d7de8f007"
@@ -1501,7 +1502,6 @@
   integrity sha512-Ohj6KB7siKqZaQhNJVMBBUzT3Nnp6eTKqO+FXO3qu/n1hJl3YLwVKTWBg28LF7MWrKu46UuYavwMRxud0VyqHg==
   dependencies:
     "@docusaurus/core" "3.4.0"
-    "@docusaurus/plugin-content-blog" "3.4.0"
     "@docusaurus/plugin-content-docs" "3.4.0"
     "@docusaurus/plugin-content-pages" "3.4.0"
     "@docusaurus/plugin-debug" "3.4.0"
@@ -1522,7 +1522,6 @@
     "@docusaurus/core" "3.4.0"
     "@docusaurus/mdx-loader" "3.4.0"
     "@docusaurus/module-type-aliases" "3.4.0"
-    "@docusaurus/plugin-content-blog" "3.4.0"
     "@docusaurus/plugin-content-docs" "3.4.0"
     "@docusaurus/plugin-content-pages" "3.4.0"
     "@docusaurus/theme-common" "3.4.0"
@@ -1552,7 +1551,6 @@
   dependencies:
     "@docusaurus/mdx-loader" "3.4.0"
     "@docusaurus/module-type-aliases" "3.4.0"
-    "@docusaurus/plugin-content-blog" "3.4.0"
     "@docusaurus/plugin-content-docs" "3.4.0"
     "@docusaurus/plugin-content-pages" "3.4.0"
     "@docusaurus/utils" "3.4.0"
