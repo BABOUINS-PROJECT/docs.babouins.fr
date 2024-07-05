@@ -25,14 +25,14 @@ cd /tmp
 
 **Sur le serveur Minecraft** :
 ```bash
-wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/server.jar
-wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/bluemap-spigot.jar
-wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/minecraft-client.jar
+wget https://public.babouins.fr/assets/bluemap/server.jar
+wget https://public.babouins.fr/assets/bluemap/bluemap-spigot.jar
+wget https://public.babouins.fr/assets/bluemap/minecraft-client.jar
 ```
 **Sur le serveur Proxy** :
 ```bash
-wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/default.conf
-wget https://public.babouins.fr/assets/bluemap-mysql-nginx-haproxy/haproxy.cfg
+wget https://public.babouins.fr/assets/bluemap/default.conf
+wget https://public.babouins.fr/assets/bluemap/haproxy.cfg
 ```
 
 ## 📂 Partie 1 : Installation de MySQL
