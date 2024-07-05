@@ -2,7 +2,6 @@
   "label": "Bienvenue",
   "position": 1,
   "link": {
-    "type": "generated-index",
-    "description": "Bienvenue, voici les différentes sections de la documentation."
+    "type": "generated-index"
   }
 }
