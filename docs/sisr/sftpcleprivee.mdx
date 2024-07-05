@@ -1,0 +1,68 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# SFTP avec clé privée
+
+<Tabs>
+  <TabItem value="filezilla" label="FileZilla" default>
+    ## 📥 FileZilla
+
+    ### Étape 1 : Installation de FileZilla
+    1. Téléchargez et installez FileZilla depuis le site officiel [FileZilla](https://filezilla-project.org/) 🖥️.
+    
+    ### Étape 2 : Conversion de la clé privée
+    Si votre clé privée est au format OpenSSH, vous pouvez passer à l'étape 3. Sinon, convertissez-la en utilisant PuTTYgen :
+    2. Téléchargez et ouvrez PuTTYgen [PuTTYgen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) 🔧.
+    3. Cliquez sur "Load" pour charger votre clé privée existante (au format .pem par exemple) 📂.
+    4. Sauvegardez la clé privée en cliquant sur "Save private key" (format .ppk) 💾.
+
+    ### Étape 3 : Configuration de FileZilla
+    5. Ouvrez FileZilla.
+    6. Allez dans "Édition" > "Paramètres" > "SFTP" ⚙️.
+    7. Cliquez sur "Ajouter une clé de fichier" et sélectionnez votre clé privée (format .ppk ou .pem) 🔑.
+    8. Allez dans "Fichier" > "Gestionnaire de sites" 🌐.
+    9. Ajoutez un nouveau site avec les informations suivantes :
+       - **Protocole** : SFTP - SSH File Transfer Protocol
+       - **Hôte** : votre adresse serveur 🏠
+       - **Port** : 22
+       - **Type d'authentification** : Clé privée
+       - **Utilisateur** : votre nom d'utilisateur 👤
+       - **Clé privée** : sélectionnez votre clé privée déjà ajoutée
+
+    ### Étape 4 : Connexion
+    10. Cliquez sur "Connexion" pour vous connecter à votre serveur 🚀.
+
+  </TabItem>
+
+  <TabItem value="winscp" label="WinSCP">
+    ## 📥 WinSCP
+
+    ### Étape 1 : Installation de WinSCP
+    1. Téléchargez et installez WinSCP depuis le site officiel [WinSCP](https://winscp.net/) 🖥️.
+    
+    ### Étape 2 : Conversion de la clé privée
+    Vous pouvez convertir votre clé privée en utilisant l'une des deux méthodes suivantes :
+
+    **Méthode 1 : Conversion via PuTTYgen**
+    2. Téléchargez et ouvrez PuTTYgen [PuTTYgen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) 🔧.
+    3. Cliquez sur "Load" pour charger votre clé privée existante (au format .pem par exemple) 📂.
+    4. Sauvegardez la clé privée en cliquant sur "Save private key" (format .ppk) 💾.
+
+    **Méthode 2 : Conversion directement via WinSCP**
+    5. Ouvrez WinSCP.
+    6. Cliquez sur "Nouveau site" 🌐.
+    7. Entrez les informations suivantes :
+       - **Protocole de fichier** : SFTP
+       - **Hôte** : votre adresse serveur 🏠
+       - **Port** : 22
+       - **Nom d'utilisateur** : votre nom d'utilisateur 👤
+    8. Cliquez sur "Avancé" > "Authentification" 🔍.
+    9. Dans le champ "Fichier de clé privée", cliquez sur les "..." et sélectionnez votre clé privée (format .ppk ou .pem) 🔑.
+    10. **Note** : WinSCP convertira automatiquement la clé privée en format compatible si nécessaire 🛠️.
+    11. Cliquez sur "OK" pour revenir à la fenêtre principale.
+
+    ### Étape 3 : Connexion
+    12. Cliquez sur "Connexion" pour vous connecter à votre serveur 🚀.
+
+  </TabItem>
+</Tabs>

@@ -41,4 +41,3 @@ wget https://public.babouins.fr/assets/exempledoc/fichier.exemple
 
 ## 🆘 Support
 Pour toute question ou problème concernant l'hébergement de fichiers, veuillez contacter à nouveau l'une des personnes responsables via le serveur Discord.
-Nous serons ravis de vous aider !
