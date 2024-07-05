@@ -1,7 +1,10 @@
-name: Deploy to GitHub Pages
+name: CI/CD for Docusaurus
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
@@ -28,6 +31,7 @@ jobs:
         run: yarn build
 
       - name: Upload Build Artifact
+        if: success()
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
@@ -35,6 +39,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build
+    if: github.event_name == 'push' && success()
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
