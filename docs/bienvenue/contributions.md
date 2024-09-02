@@ -6,31 +6,27 @@ sidebar_position: 2
 
 Pour contribuer au projet :
 
-1. **Forkez** le dépôt.
-
-> Un **fork** est une copie d'un projet GitHub sur votre propre compte. Cela vous permet de travailler sur le projet sans toucher à l'original. Une fois vos modifications terminées, vous pouvez demander à les ajouter au projet principal via une pull request.
-
-2. **Clonez** votre fork sur votre machine :
+1. **Clonez** le projet sur votre machine locale:
     ```bash
-    git clone https://github.com/votre-utilisateur/docs.babouins.fr.git
+    git clone https://github.com/BABOUINS-PROJECT/docs.babouins.fr.git
     ```
 
-3. **Créez** une nouvelle branche pour vos modifications :
+2. **Créez** une nouvelle branche pour vos modifications :
     ```bash
     git checkout -b <branch>
     ```
 
-4. **Effectuez** vos modifications et **committez** :
+3. **Effectuez** vos modifications et **committez** :
     ```bash
     git commit -m "ajout_nouvelle_procédure"
     ```
 
-5. **Pushez** vers votre fork :
+4. **Pushez** vers votre fork :
     ```bash
     git push 
     ```
 
-6. **Créez** une pull request sur le dépôt principal :
+5. **Créez** une pull request sur le dépôt principal :
     - Rendez-vous sur le dépôt principal du projet sur GitHub.
     - Cliquez sur le bouton **"New pull request"**.
     - Sélectionnez la branche de votre fork contenant vos modifications.
