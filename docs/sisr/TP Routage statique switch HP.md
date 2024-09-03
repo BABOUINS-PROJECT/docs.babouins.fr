@@ -1,15 +1,15 @@
-# TP : Routage statique switch HP 🚦
+# TP : Routage statique switch HP
 
 # Mise en situation 🛠️
 
-Vous êtes administrateur réseau dans une entreprise qui dispose de plusieurs départements répartis sur différents étages d'un bâtiment. Chaque département a besoin de communiquer avec les autres de manière sécurisée et efficace. Votre tâche consiste à configurer le routage statique sur les switches HP afin de permettre cette communication.
+Vous êtes administrateur réseau dans une entreprise qui dispose de plusieurs secteurs répartis sur différents étages d'un bâtiment. Chaque secteur a besoin de communiquer avec les autres de manière sécurisée et efficace. Votre tâche consiste à configurer le routage statique sur les switches HP afin de permettre cette communication.
 
 ## Objectif du TP 🎯
 
 - **Configurer les interfaces des switches** : Assigner les adresses IP appropriées aux interfaces.
-- **Définir les VLANs** : Créer et configurer les VLANs pour segmenter le réseau selon les départements.
+- **Définir les VLANs** : Créer et configurer les VLANs pour segmenter le réseau selon les secteurs.
 - **Configurer le routage statique** : Ajouter les routes statiques nécessaires pour permettre la communication inter-VLAN.
-- **Tester la connectivité** : Utiliser des outils de diagnostic pour vérifier la connectivité entre les départements.
+- **Tester la connectivité** : Utiliser des outils de diagnostic pour vérifier la connectivité entre les secteurs.
 
 ## Définitions 📚
 
@@ -37,7 +37,7 @@ Vous êtes administrateur réseau dans une entreprise qui dispose de plusieurs d
 ```
 reboot
 
-Au clavier appuiyer sur la touche Ctrl + B
+Au clavier appuyer sur la touche Ctrl + B
 Appuyer sur '5' pour la réinitialisation en mode d'usinage
 Appuyer sur '0' pour faire un reboot
 ```
@@ -137,6 +137,14 @@ Les switches A5120 sont obsolètes, donc les commandes SSH sont à rallonge
 ```bash
 ssh -oKexAlgorithms=+diffie-hellman-group14-sha1 -c aes128-cbc [user]@[IP]
 ```
+
+# Teste de la connectivité
+
+```bash
+ping 192.168.2.1 
+```
+
+Nous pouvons voir que les packets sont bien reçus.
 
 # Export de la configuration 📤
 
