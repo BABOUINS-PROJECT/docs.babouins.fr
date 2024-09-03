@@ -30,7 +30,7 @@ Vous êtes administrateur réseau dans une entreprise qui dispose de plusieurs s
 
 ## Schéma réseau 🌐
 
-![tp_routage_static_hp_provost.drawio.png](https://public.babouins.fr/assets/img/tp_routage_static_hp_provost.drawio.png)
+![tp_routage_static_hp_provost.drawio.png](https://public.babouins.fr/assets/routage_static/tp_routage_static_provost.jpg)
 
 # Réinitialisation 🔄
 
