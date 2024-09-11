@@ -1,82 +1,55 @@
 # Introduction Docker
 
-## Avec cette documentation vous pourrez :
-
-* Installer une première image
-* Lancer son premier conteneur
-* Installer une application sur le conteneur
-<br>
-__ATTENTION__: Bien penser a être connecté en root pour exécuter ces commandes.
-
-### Docker
-<br>
-Pour commencer j'installe docker.io grace a cette commande :
+ ## Objectifs de cette documentation :
+ * Installer une première image
+ * Lancer son premier conteneur
+ * Déployer un conteneur
 
 
-``` 
-apt install docker.io
-    
-```
-<br>
+**ATTENTION : Bien penser a être connecté en root pour exécuter ces commandes.**
 
-Puis j'installe l'image ngnix pour Docker :
+ ### Installation de docker Docker
 
-``` 
-docker pull nginx:stable-alpine3.20-perl
+ Pour commencer j'installe docker.io grace a cette commande :
+ ``` 
+ apt install docker.io
+ ```
 
-````
+ ### Mise en place de NGINX
 
-<br>
+ J'installe l'image ngnix pour Docker :
+ ``` 
+ docker pull nginx:stable-alpine3.20-perl
+ ````
 
-Une fois l'image installé je peut voir celle qui sont installer avec cette commande :
+ Une fois l'image installé je peut voir celle qui sont installer avec cette commande :
+ ````
+ docker image ls
+ ````
 
-````
-docker image ls
+ Pour ensuite lancer le démarrage pour la première fois je lance cette commande : 
+ ````
+ docker run --name web1 -d -p 80:80 nginx
+ ````
+- Les arguments :
+**--name** pour donner un nom au conteneur 
+**-d** pour qu'il tourne en arrière plan 
+**-p** pour lui attribuer ce port d'écoute
 
-````
+ Il suffit maintenant de tapper l'adresse IP de votre machine sur un navigateur pour voir si le conteneur fonctionne.
 
-<br>
+ ### Mise en place de VS CODE
 
+ Pour utiliser maintenant un vs code sur mon serveur docker je vais utiliser cette commande pour télécharger l’image :
 
-Pour ensuite lancer le démarrage pour la première fois je lance cette commande : 
+ ````
+ docker pull linuxserver/code-server
+ ````
 
-````
-docker run --name web1 -d -p 80:80 nginx
+ Et ensuite cette commande pour le lancer attribuer le port tout ça :
 
-````
+ ````
+ docker run -d   --name=code-server   -e PUID=1000   -e PGID=1000   -e TZ=Etc/UTC   -e PASSWORD="test"  -p 8443:8443   lscr.io/linuxserver/code-server:latest
+ `````
 
-<br>
-
-Ici j'utilise ces arguments :
-<br>
- __--name__ pour donner un nom a mon conteneur 
-__-d__ pour qu'il tourne en arrière plan 
-__-p__ pour lui attribuer ce port d'écoute
-
-<br>
-
-
-Il suffit maintenant de tapper l'adresse IP de votre machine sur un navigateur pour voir si le conteneur fonctionne.
-
-
-### VS CODE
-<BR>
-
-Pour utiliser maintenant un vs code sur mon serveur docker je vais utiliser cette commande pour télécharger l’image :
-
-````
-docker pull linuxserver/code-server
-
-````
-<br>
-
-Et ensuite cette commande pour le lancer attribuer le port tout ça :
-
-````
-docker run -d   --name=code-server   -e PUID=1000   -e PGID=1000   -e TZ=Etc/UTC   -e PASSWORD="test"  -p 8443:8443   lscr.io/linuxserver/code-server:latest
-
-`````
-
-<br>
-
-Et pour voir si il fonctionne il faut donc taper l’ip puis mettre le port qu’on a attribuer là c’est 8443
+ Et pour voir si il fonctionne il faut donc taper l’ip puis mettre le port qu’on a attribuer là c’est 8443
