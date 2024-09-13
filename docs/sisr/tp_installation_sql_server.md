@@ -68,6 +68,9 @@
 
 ## Requêtes SQL pour l'administration de la base
 
+- Faire un **clic droit** sur la base.
+- Sélectionner **New Query**.
+
 ### 1. Liste des logiciels par utilisateurs
 ```sql
 SELECT U.nom AS nom_utilisateur, U.prenom AS prenom_utilisateur, L.nom AS nom_logiciel
