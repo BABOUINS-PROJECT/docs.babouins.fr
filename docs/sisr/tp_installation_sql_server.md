@@ -4,15 +4,12 @@
 - Système d'exploitation : Windows Server 2022
 - Nom du serveur : **SQL-SERVER**
 - Groupe : **CFAI**
-- Identifiants d'administration : 
-  - ID : **Administrateur**
-  - Mot de passe : **P@ssw0rd**
 
 ## Définitions
 
-**Résilience :** Capacité d’un système à s’auto-dépanner en cas de problème.
-**Robustesse :** Capacité d’un système à résister à des surcharges ou des attaques.
-**Workgroup :** Groupe de travail dans lequel plusieurs ordinateurs partagent des ressources sans serveur centralisé.
+- **Résilience :** Capacité d’un système à s’auto-dépanner en cas de problème.
+- **Robustesse :** Capacité d’un système à résister à des surcharges ou des attaques.
+- **Workgroup :** Groupe de travail dans lequel plusieurs ordinateurs partagent des ressources sans serveur centralisé.
 
 ## Étapes de configuration
 
