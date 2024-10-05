@@ -1,0 +1,196 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Docker
+
+<Tabs>
+  <TabItem value="tp" label="TP (Installation et Création des Conteneurs)" default>
+
+    ## Objectifs de cette documentation
+
+    Cette documentation a pour but de vous guider dans l'utilisation de Docker en abordant les points suivants :
+
+    - Installer Docker sur votre machine
+    - Installer une première image Docker
+    - Lancer un conteneur
+    - Déployer une application avec un conteneur Docker (exemple avec NGINX)
+    - Utiliser VS Code dans un conteneur Docker
+
+    > **⚠️ Note :** Les commandes Docker nécessitent souvent des privilèges superutilisateur (root). Pensez à exécuter les commandes en tant que root ou utilisez `sudo` si nécessaire.
+
+    ## 🚀 Installation de Docker
+
+    Pour installer Docker sur votre machine, exécutez la commande suivante :
+
+    ```bash
+    apt install docker.io
+    ```
+
+    Une fois Docker installé, vous pouvez vérifier que le service fonctionne avec :
+
+    ```bash
+    systemctl start docker
+    systemctl enable docker
+    ```
+
+    Cela va démarrer le service Docker et l'activer au démarrage du système.
+
+    ## 🌐 Téléchargement et lancement de NGINX
+
+    ### Téléchargement de l'image NGINX
+
+    Pour télécharger l'image Docker de NGINX (ici, la version stable basée sur Alpine Linux), exécutez la commande suivante :
+
+    ```bash
+    docker pull nginx
+    ```
+
+    ### Vérification des images Docker
+
+    Une fois l'image téléchargée, vous pouvez vérifier les images disponibles sur votre machine avec la commande suivante :
+
+    ```bash
+    docker image ls
+    ```
+
+    Cette commande listera toutes les images Docker installées localement.
+
+    ### Lancement du conteneur NGINX
+
+    Pour démarrer un conteneur basé sur l'image NGINX que vous venez de télécharger, utilisez cette commande. Le nom du conteneur sera **web1** :
+
+    ```bash
+    docker run --name web1 -d -p 80:80 nginx
+    ```
+
+    Voici une explication des options utilisées :
+
+    - `--name web1` : Attribue le nom **web1** au conteneur.
+    - `-d` : Lance le conteneur en mode détaché (en arrière-plan).
+    - `-p 80:80` : Mappe le port 80 de l'hôte (votre machine) au port 80 du conteneur, permettant l'accès via un navigateur.
+
+    > Pour vérifier que le conteneur fonctionne, ouvrez un navigateur et tapez l'adresse IP de votre machine. Vous devriez voir la page par défaut de NGINX.
+
+    ### Gestion des conteneurs
+
+    Voici quelques commandes pratiques pour gérer le conteneur **web1** :
+
+    - **Voir les conteneurs actifs** :
+
+      ```bash
+      docker ps
+      ```
+
+    - **Arrêter le conteneur** :
+
+      ```bash
+      docker stop web1
+      ```
+
+    - **Redémarrer le conteneur** :
+
+      ```bash
+      docker start web1
+      ```
+
+    - **Supprimer le conteneur** (une fois qu'il est arrêté) :
+
+      ```bash
+      docker rm web1
+      ```
+
+    ## 💻 Mise en place de VS Code dans Docker
+
+    Docker peut également être utilisé pour exécuter un environnement de développement, tel que VS Code. Voici comment mettre en place un serveur VS Code dans un conteneur.
+
+    ### Téléchargement de l'image VS Code
+
+    Téléchargez l'image Docker de VS Code avec cette commande :
+
+    ```bash
+    docker pull lscr.io/linuxserver/code-server:latest
+    ```
+
+    ### Lancement du conteneur VS Code
+
+    Lancez le serveur VS Code avec les options suivantes, en nommant le conteneur **vscode-server** :
+
+    ```bash
+    docker run -d --name=vscode-server -e PUID=1000 -e PGID=1000 -e TZ=Etc/UTC -e PASSWORD="test" -p 8443:8443 lscr.io/linuxserver/code-server:latest
+    ```
+
+    Explication des options :
+
+    - `--name=vscode-server` : Attribue le nom **vscode-server** au conteneur.
+    - `-e PUID=1000` et `-e PGID=1000` : Définit les identifiants utilisateur et groupe (peut être ajusté selon votre configuration).
+    - `-e TZ=Etc/UTC` : Définit le fuseau horaire (modifiable selon vos besoins).
+    - `-e PASSWORD="test"` : Définit un mot de passe d'accès au serveur VS Code.
+    - `-p 8443:8443` : Mappe le port 8443 de l'hôte au port 8443 du conteneur (assurez-vous que le port 8443 est libre sur votre machine).
+
+    ### Accès à VS Code
+
+    Pour accéder à VS Code dans Docker, ouvrez un navigateur et tapez l'adresse IP de votre machine suivie du port 8443. Par exemple :
+
+    ```
+    http://<votre-ip>:8443
+    ```
+
+    Entrez ensuite le mot de passe que vous avez défini (dans cet exemple, "test").
+  </TabItem>
+
+  <TabItem value="cours" label="Cours (Commandes)">
+
+    ## Résumé des commandes essentielles
+
+    Voici un résumé des principales commandes Docker utilisées dans cette documentation :
+
+    - **Télécharger une image** : 
+
+      ```bash
+      docker pull <nom_image>
+      ```
+
+    - **Lister les images** : 
+
+      ```bash
+      docker image ls
+      ```
+
+    - **Lancer un conteneur avec un nom imposé** : 
+
+      ```bash
+      docker run --name <nom_conteneur> [options] <nom_image>
+      ```
+
+    - **Vérifier les conteneurs actifs** : 
+
+      ```bash
+      docker ps
+      ```
+
+    - **Arrêter un conteneur** : 
+
+      ```bash
+      docker stop <nom_conteneur>
+      ```
+
+    - **Démarrer un conteneur** : 
+
+      ```bash
+      docker start <nom_conteneur>
+      ```
+
+    - **Supprimer un conteneur** : 
+
+      ```bash
+      docker rm <nom_conteneur>
+      ```
+
+    ### Informations Complémentaires
+
+    Docker est un outil puissant qui permet de créer, déployer et exécuter des applications dans des conteneurs. Les conteneurs sont légers et portables, ce qui permet aux développeurs de créer des environnements de développement et de production de manière cohérente.
+
+    Pour plus d'informations, consultez la [documentation officielle de Docker](https://docs.docker.com/).
+
+  </TabItem>
+</Tabs>

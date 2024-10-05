@@ -1,5 +1,7 @@
 # TP : Routage statique switch HP
 
+⬇️ **Télécharger TP** : [tp_routage_static.pkt](https://public.babouins.fr/assets/routage_static/tp.pkt)
+
 # Mise en situation 🛠️
 
 Vous êtes administrateur réseau dans une entreprise qui dispose de plusieurs secteurs répartis sur différents étages d'un bâtiment. Chaque secteur a besoin de communiquer avec les autres de manière sécurisée et efficace. Votre tâche consiste à configurer le routage statique sur les switches HP afin de permettre cette communication.
@@ -30,7 +32,7 @@ Vous êtes administrateur réseau dans une entreprise qui dispose de plusieurs s
 
 ## Schéma réseau 🌐
 
-![tp_routage_static_hp_provost.drawio.png](https://public.babouins.fr/assets/routage_static/tp_routage_static_provost.jpg)
+![tp_routage_static_hp_provost.drawio.png](https://public.babouins.fr/assets/routage_static/shema_provost.jpg)
 
 # Réinitialisation 🔄
 
