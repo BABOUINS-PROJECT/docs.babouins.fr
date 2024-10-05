@@ -154,6 +154,7 @@ Nous pouvons voir que les packets sont bien reçus.
 display current-config
 ```
 
+
 ```bash
 #
  sysname HP
