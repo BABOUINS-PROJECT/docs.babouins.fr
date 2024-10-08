@@ -51,11 +51,11 @@ vgextend mon_vg /dev/sdc1
 
 ### 📦 Création d'un Logical Volume (LV)
 ```bash
-lvcreate -L taille --name nom nom_du_vg
+vcreate -L taille --name nom -r nom_du_vg
 
-Exemple : lvcreate -L 2G --name mc_alice debian-vg
+Exemple : lvcreate -L 2G --name mc_alice -r debian-vg
 ```
-> 💡 ***Un LV fonctionne comme une partition traditionnelle mais avec plus de flexibilité.***
+> 💡 ***L’option -r assure que le système de fichiers est synchronisé lors de la création du LV.***
 
 ### 🗄️ Ajouter le file system
 ```bash

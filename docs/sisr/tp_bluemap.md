@@ -1,4 +1,4 @@
-# MySQL, BlueMap, Reverse Proxy Nginx & HAProxy 
+# TP : MySQL, BlueMap, Reverse Proxy Nginx & HAProxy 
 
 ## 🎯 Objectifs
 
@@ -25,14 +25,14 @@ cd /tmp
 
 **Sur le serveur Minecraft** :
 ```bash
-wget https://public.babouins.fr/assets/bluemap/server.jar
-wget https://public.babouins.fr/assets/bluemap/bluemap-spigot.jar
-wget https://public.babouins.fr/assets/bluemap/minecraft-client.jar
+wget https://public.babouins.fr/assets/tp_bluemap/server.jar
+wget https://public.babouins.fr/assets/tp_bluemap/bluemap-spigot.jar
+wget https://public.babouins.fr/assets/tp_bluemap/minecraft-client.jar
 ```
 **Sur le serveur Proxy** :
 ```bash
-wget https://public.babouins.fr/assets/bluemap/default.conf
-wget https://public.babouins.fr/assets/bluemap/haproxy.cfg
+wget https://public.babouins.fr/assets/tp_bluemap/default.conf
+wget https://public.babouins.fr/assets/tp_bluemap/haproxy.cfg
 ```
 
 ## 📂 Partie 1 : Installation de MySQL

@@ -1,6 +1,6 @@
 # TP : Routage statique switch HP
 
-⬇️ **Télécharger TP** : [tp_routage_static.pkt](https://public.babouins.fr/assets/routage_static/tp_routage_static.pkt)
+⬇️ **Télécharger TP** : [tp_routage_statique.pkt](https://public.babouins.fr/assets/tp_routage_statique/tp.pkt)
 
 # Mise en situation 🛠️
 
@@ -32,7 +32,7 @@ Vous êtes administrateur réseau dans une entreprise qui dispose de plusieurs s
 
 ## Schéma réseau 🌐
 
-![tp_routage_static_hp_provost.drawio.png](https://public.babouins.fr/assets/routage_static/tp_routage_static_provost.jpg)
+![shema_provost.jpg](https://public.babouins.fr/assets/tp_routage_statique/shema_provost.jpg)
 
 # Réinitialisation 🔄
 
