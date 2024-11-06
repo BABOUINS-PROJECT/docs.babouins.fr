@@ -10,7 +10,7 @@ require('dotenv').config()
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Babouins - Documentation',
-  tagline: '⚠️ DocSearch est en cours de développement ⚠️',
+  // tagline: '⚠️ DocSearch est en cours de développement ⚠️',
   favicon: 'img/baboons.svg',
 
   // Set the production url of your site here
