@@ -10,7 +10,7 @@ require('dotenv').config()
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Babouins - Documentation',
-  tagline: '⚠️ DocSearch est en cours de développement ⚠️',
+  // tagline: '⚠️ DocSearch est en cours de développement ⚠️',
   favicon: 'img/baboons.svg',
 
   // Set the production url of your site here
@@ -57,18 +57,18 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-     /** @type {import('@docusaurus/theme-search-algolia').ThemeConfig} */
+    //** @type {import('@docusaurus/theme-search-algolia').ThemeConfig} */
     ({
 
-       algolia: {
-         appId: process.env.APP_ID,
-         apiKey: process.env.API_KEY,
-         indexName: 'docs.babouins.fr',
-         contextualSearch: true,
-         searchParameters: {},
-         searchPagePath: 'search',
+    //   algolia: {
+    //     appId: process.env.APP_ID,
+    //     apiKey: process.env.API_KEY,
+    //     indexName: 'docs.babouins.fr',
+    //     contextualSearch: true,
+    //     searchParameters: {},
+    //     searchPagePath: 'search',
          //... other Algolia params
-       },
+    //   },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
